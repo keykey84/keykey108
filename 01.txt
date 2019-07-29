@@ -1,0 +1,20 @@
+#把之前文章中的字，取出前10個出現最多字的。
+#找一篇文章，用file打開，找出它裡面所有的字出現次數。文章是ask.txt
+file = open("ask.txt")
+#準備好一個dict()來放東西
+count = dict() 
+#把每一個字母取出來。
+for line in file:
+  for word in line.split():
+    count [word.lower()]=count.get(word.lower(),0)+1
+
+lst=list()
+#要把v和k顛倒，因為要把"值"先加在前面，等等比較好比大小。
+for(k,v) in  count.items():
+  list.append((v,k))
+  
+#print(lst)
+lst.sort()
+
+for i in range(10):
+   print(list[i])
