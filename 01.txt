@@ -18,3 +18,5 @@ lst.sort()
 
 for i in range(10):
    print(list[i])
+
+text
